@@ -308,7 +308,22 @@ def seven(input):
 
 
 def eight(input):
-    return ""
+    numbers_list=[]
+    list_length=0
+    for i in range(input,0,-1):
+        numbers_list.append(i)
+        list_length+=1
+
+
+    factorial=0
+    for i in range(0,list_length,1):
+        if (i==0):
+            factorial=numbers_list[i]
+        else:
+            factorial*=numbers_list[i]
+
+
+    return factorial
 
     # <QUESTION 9>
 
@@ -354,4 +369,3 @@ def ten(string, int, char):
     return ""
 
 
-seven("hEelLoooO")
