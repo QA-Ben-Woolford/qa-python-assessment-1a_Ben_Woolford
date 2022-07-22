@@ -70,9 +70,16 @@ def one(input1, input2):
 
 
 def two(input):
-    
-    
-    return ""
+    input_lowercase=str(input).lower()
+
+    returnvalue=""
+    if (input_lowercase.count("bert")==2):
+        split_input=input_lowercase.split("bert")
+
+
+        returnvalue=split_input[1]
+
+    return returnvalue
 
 
     # <QUESTION 3>
@@ -253,3 +260,5 @@ def nine(inputString, char):
 
 def ten(string, int, char):
     return ""
+
+
