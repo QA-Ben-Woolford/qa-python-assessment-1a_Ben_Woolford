@@ -35,7 +35,16 @@
 
 
 def one(input1, input2):
-    return ""
+    input1_length=len(input1) 
+    input2_length=len(input2) 
+    returnvalue="nothing" 
+    if (input1_length>input2_length): 
+        returnvalue=input1 
+    elif (input2_length>input1_length): 
+        returnvalue=input2 
+    else: returnvalue=input1+" "+input2 
+
+    return returnvalue
 
    # <QUESTION 2>
 
@@ -61,6 +70,8 @@ def one(input1, input2):
 
 
 def two(input):
+    
+    
     return ""
 
 
