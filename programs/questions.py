@@ -138,7 +138,21 @@ def three(arg1):
 
 
 def four(arg1):
-    return ""
+    nums_list=arg1.split(" ")
+    result_list=[]
+    count=0
+    for num in nums_list:
+        digit_length=len(num)
+        count=0
+        for digit in range(0,digit_length):
+            count+=int(num[digit])
+        result_list.append(count)
+
+    highestvalue=0
+    for num in result_list:
+        if (highestvalue<num):
+            highestvalue=num
+    return highestvalue
 
     # <QUESTION 5>
 
