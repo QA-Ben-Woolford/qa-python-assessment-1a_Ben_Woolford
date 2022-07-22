@@ -345,7 +345,15 @@ def eight(input):
 
 
 def nine(inputString, char):
-    return ""
+    cleanedinput=inputString.replace(" ","")
+
+    char_occurence_value=cleanedinput.find(char)+1
+
+    if (char_occurence_value==0):
+        char_occurence_value=-1
+
+
+    return char_occurence_value
 
     # <QUESTION 10>
 
@@ -369,3 +377,4 @@ def ten(string, int, char):
     return ""
 
 
+nine("Fridge for sale","z")
