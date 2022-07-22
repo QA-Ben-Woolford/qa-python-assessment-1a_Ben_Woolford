@@ -103,7 +103,16 @@ def two(input):
 
 
 def three(arg1):
-    return ""
+    returnvalue="null"
+
+    if (arg1 % 3 ==0):
+        returnvalue="fizz"
+    if (arg1 % 5 ==0):
+        returnvalue="buzz"
+    if ((arg1 % 3 ==0) and (arg1 % 5 ==0)):
+        returnvalue="fizzbuzz"
+    
+    return returnvalue
 
     # <QUESTION 4>
 
