@@ -243,7 +243,31 @@ def five(input):
 
 
 def six(input):
-    return ""
+    input_lowercase=input.lower()
+    digit_length=len(input_lowercase)
+
+    rule_followed=True
+
+    ie="ie"
+
+    position=input_lowercase.find(ie)
+
+    if (position>0):
+        if (input_lowercase[position-1]=="c"):
+            rule_followed=False   
+    
+    ei="ei"
+
+    position=input_lowercase.find(ei)
+
+    if (position>0):
+        if not (input_lowercase[position-1]=="c"):
+            rule_followed=False   
+            
+    #for i in range(0,digit_length):
+        
+
+    return rule_followed
 
     # <QUESTION 7>
 
