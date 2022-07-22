@@ -285,7 +285,11 @@ def six(input):
 
 
 def seven(input):
-    return ""
+    input_lower=input.lower()
+
+    occurences_count=input_lower.count("a")+input_lower.count("e")+input_lower.count("i")+input_lower.count("o")+input_lower.count("u")
+    
+    return occurences_count
 
     # <QUESTION 8>
 
@@ -350,3 +354,4 @@ def ten(string, int, char):
     return ""
 
 
+seven("hEelLoooO")
