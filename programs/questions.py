@@ -374,7 +374,16 @@ def nine(inputString, char):
 
 
 def ten(string, int, char):
-    return ""
+    valid=False
+
+    string_cleaned=string.lower()
+
+    string_length=len(string)
+
+    if (int-1<string_length) and (int-1>=0):
+        if (string_cleaned[int-1]==char):
+            valid=True
+            
+    return valid
 
 
-nine("Fridge for sale","z")
