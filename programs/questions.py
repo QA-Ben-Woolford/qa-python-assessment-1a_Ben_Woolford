@@ -181,7 +181,48 @@ def four(arg1):
 
 
 def five(input):
-    return ""
+    csv_split=input.split(",")
+
+    count=0
+    record_index=0
+    record_size=4
+
+    name_list=[]
+    current_name=""
+    for word in csv_split:
+        match (record_index):
+            # owner,nameOfFile,encrypted?,fileSize
+            case 0: # owner
+                current_name=word
+
+                include=True
+
+                for name in name_list:
+                    if (current_name==name):
+                        include=False
+
+                if (include==True):
+                    name_list.append(word)
+                
+            case 1: # nameOfFile
+                word=""
+            case 2: # encrypted         
+                
+                encrypted=(False, True)[word=="True"]
+                if encrypted==True:
+                    name_list.remove(current_name)
+                    if (len(name_list)==0):
+                        name_list=[]
+                word=""
+            case 3: # fileSize
+                word=""
+        record_index+=1
+        if (record_index>=record_size):
+            record_index=0
+
+    return_value=name_list
+
+    return return_value
 
     # <QUESTION 6>
 
